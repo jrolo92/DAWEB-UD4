@@ -3,178 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Traileros - Carreras de Montaña</title>
-    <style>
-        /* --- ESTILOS GENERALES --- */
-        :root {
-            --primary: #2d5a27; /* Verde bosque */
-            --secondary: #f4f4f4;
-            --accent: #e67e22; /* Naranja montaña */
-            --dark: #333;
-            --text-light: #666;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: var(--secondary);
-            color: var(--dark);
-        }
-
-        /* --- HEADER --- */
-        header {
-            background-color: var(--primary);
-            color: white;
-            padding: 1rem 2rem;
-            display: flex;
-            align-items: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .logo-circle {
-            width: 45px;
-            height: 45px;
-            background-color: white;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-weight: bold;
-            color: var(--primary);
-            font-size: 1.2rem;
-        }
-
-        h1 {
-            margin: 0;
-            font-size: 1.8rem;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        /* --- CONTENEDOR DE TARJETAS --- */
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 2rem;
-        }
-
-        /* --- TARJETA --- */
-        .card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-        }
-
-        .card-image {
-            width: 100%;
-            height: 200px;
-            background-color: #ddd;
-            object-fit: cover;
-        }
-
-        .card-content {
-            padding: 1.5rem;
-            flex-grow: 1;
-        }
-
-        .badge {
-            display: inline-block;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: bold;
-            margin-bottom: 10px;
-            text-transform: uppercase;
-        }
-
-        .dificultad-alta { background: #fee2e2; color: #dc2626; }
-        .dificultad-media { background: #fef3c7; color: #d97706; }
-        .dificultad-muy-alta { background: #450a0a; color: white; }
-        .dificultad-moderada { background: #dcfce7; color: #16a34a; }
-
-        .card-title {
-            margin: 0 0 10px 0;
-            font-size: 1.4rem;
-            color: var(--primary);
-        }
-
-        .card-info {
-            font-size: 0.9rem;
-            color: var(--text-light);
-            margin-bottom: 15px;
-        }
-
-        .card-description {
-            font-size: 0.95rem;
-            line-height: 1.5;
-            margin-bottom: 20px;
-        }
-
-        .stats {
-            display: flex;
-            justify-content: space-between;
-            border-top: 1px solid #eee;
-            padding-top: 15px;
-            font-weight: bold;
-        }
-
-        .stat-item span {
-            display: block;
-            font-size: 0.75rem;
-            color: var(--text-light);
-            font-weight: normal;
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            text-align: center;
-            padding: 2rem;
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-    </style>
+    <title>Traileros - Carreras y Rutas</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <header>
+    <header class="main-header">
         <div class="logo-container">
             <div class="logo-circle">
-                <img src="images/logo.webp" alt="Traileros" width="100px" height="100">
+                <img src="images/logo.webp" alt="Traileros" class="logo-img">
             </div>
-            <h1>Traileros</h1>
+            <h1 class="logo-title">Traileros</h1>
         </div>
     </header>
 
     <main class="container">
-        
         <article class="card">
             <img src="images/genal.jpg" alt="Valle del Genal" class="card-image" onerror="this.src='https://via.placeholder.com/400x200?text=Trail+Running'">
             <div class="card-content">
                 <span class="badge dificultad-alta">Alta</span>
                 <h2 class="card-title">Gran Vuelta Valle del Genal</h2>
                 <div class="card-info">📍 Pujerra, Málaga | 📅 25-10-2025</div>
-                <p class="card-description">Recorrido circular de 55 km por el Alto Valle del Genal con 2900 m de desnivel positivo. Una de las pruebas más exigentes.</p>
+                <p class="card-description">Recorrido circular de 55 km por el Alto Valle del Genal con 2900 m de desnivel positivo.</p>
                 <div class="stats">
                     <div class="stat-item"><span>Distancia</span>55 Km</div>
                     <div class="stat-item"><span>Desnivel</span>+2900 m</div>
@@ -188,7 +38,7 @@
                 <span class="badge dificultad-media">Media</span>
                 <h2 class="card-title">CXM La Toleta</h2>
                 <div class="card-info">📍 Puerto Serrano, Cádiz | 📅 23-11-2025</div>
-                <p class="card-description">Carrera por montaña que recorre los parajes naturales de Puerto Serrano, con tramos técnicos y vistas espectaculares.</p>
+                <p class="card-description">Carrera por montaña por parajes naturales, con tramos técnicos y vistas espectaculares.</p>
                 <div class="stats">
                     <div class="stat-item"><span>Distancia</span>29 Km</div>
                     <div class="stat-item"><span>Desnivel</span>+1650 m</div>
@@ -202,7 +52,7 @@
                 <span class="badge dificultad-alta">Alta</span>
                 <h2 class="card-title">Víboras Trail Algodonales</h2>
                 <div class="card-info">📍 Algodonales, Cádiz | 📅 01-02-2025</div>
-                <p class="card-description">Atraviesa la Sierra de Líjar. Ofrece modalidades exigentes con un recorrido técnico y paisajes de vértigo.</p>
+                <p class="card-description">Recorrido técnico por la Sierra de Líjar con paisajes de vértigo y mucha exigencia.</p>
                 <div class="stats">
                     <div class="stat-item"><span>Distancia</span>42 Km</div>
                     <div class="stat-item"><span>Desnivel</span>+4200 m</div>
@@ -216,7 +66,7 @@
                 <span class="badge dificultad-alta">Alta</span>
                 <h2 class="card-title">101 Km de Ronda</h2>
                 <div class="card-info">📍 Ronda, Málaga | 📅 10-05-2025</div>
-                <p class="card-description">Mítica prueba organizada por La Legión por la Serranía de Ronda. Una experiencia única con ambiente festivo.</p>
+                <p class="card-description">Mítica prueba organizada por La Legión por la Serranía de Ronda. Ambiente festivo único.</p>
                 <div class="stats">
                     <div class="stat-item"><span>Distancia</span>101 Km</div>
                     <div class="stat-item"><span>Desnivel</span>+2500 m</div>
@@ -230,7 +80,7 @@
                 <span class="badge dificultad-muy-alta">Muy Alta</span>
                 <h2 class="card-title">Sierra de los Bandoleros</h2>
                 <div class="card-info">📍 Prado del Rey, Cádiz | 📅 07-03-2025</div>
-                <p class="card-description">Recorrido épico por Grazalema, con tramos nocturnos y desniveles extremos. Solo para valientes.</p>
+                <p class="card-description">Recorrido épico por Grazalema, con tramos nocturnos y desniveles extremos.</p>
                 <div class="stats">
                     <div class="stat-item"><span>Distancia</span>82 Km</div>
                     <div class="stat-item"><span>Desnivel</span>+4500 m</div>
@@ -244,14 +94,13 @@
                 <span class="badge dificultad-media">Media</span>
                 <h2 class="card-title">XIV Pinsapo Trail</h2>
                 <div class="card-info">📍 Yunquera, Málaga | 📅 21-03-2026</div>
-                <p class="card-description">Recorrido por el Parque Nacional Sierra de las Nieves, transitando por los singulares bosques de pinsapos.</p>
+                <p class="card-description">Recorrido por la Sierra de las Nieves, entre bosques de pinsapos milenarios.</p>
                 <div class="stats">
                     <div class="stat-item"><span>Distancia</span>29 Km</div>
                     <div class="stat-item"><span>Desnivel</span>+1200 m</div>
                 </div>
             </div>
         </article>
-
     </main>
 
     <footer>
